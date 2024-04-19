@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_835ACC"
+        tools:context=".ColorBlurActivity">
+
+        <ImageView
+            android:id="@+id/blurImgView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitStart"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0" />
+
+        <eightbitlab.com.blurview.BlurView
+            android:id="@+id/blurView"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:blurOverlayColor="@color/color_80FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/blur"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="blur"
+            app:layout_constraintTop_toBottomOf="@id/blurView" />
+
+        <Button
+            android:id="@+id/finsh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="back"
+            app:layout_constraintTop_toBottomOf="@id/blur" />
+
+        <Button
+            android:id="@+id/loadImg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="loadImg"
+            app:layout_constraintTop_toBottomOf="@id/finsh" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
